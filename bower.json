@@ -1,0 +1,21 @@
+{
+  "name": "mi_sitio_web",
+  "version": "0.1",
+  "homepage": "https://github.com/gpincheiraa/sitio_web",
+  "authors": [
+    "Gonzalo Pincheira Arancibia <g.pincheira.a@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "materialize": "~0.96.1",
+    "ui-router": "~0.2.15"
+  }
+}

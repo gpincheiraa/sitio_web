@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>La Página</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" />
+  <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
 </head>
-<body>
+<body ng-app="webApp">
+  <div class="container" ui-view></div>
+
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
   
+  <script src="app/app.js"></script>
+  <script src="app/main/controllers/main.controller.js"></script>
 </body>
 </html>
