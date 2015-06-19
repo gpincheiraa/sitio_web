@@ -1,0 +1,42 @@
+{
+  "name": "ng-device-detector",
+  "version": "1.1.7",
+  "devDependencies": {
+    "angular": "*",
+    "angular-mocks": "*",
+    "gulp": "*",
+    "gulp-bump": "^0.3.0",
+    "gulp-concat": "*",
+    "gulp-filter": "^2.0.2",
+    "gulp-git": "^1.2.3",
+    "gulp-karma": "*",
+    "gulp-tag-version": "^1.2.1",
+    "gulp-uglify": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-nested-reporter": "*",
+    "karma-phantomjs-launcher": "*",
+    "uglify-js": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+  },
+  "description": "Uses user-agent to set css classes or directly usable via JS.",
+  "main": "ng-device-detector.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srfrnk/ng-device-detector.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "srfrnk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srfrnk/ng-device-detector/issues"
+  },
+  "homepage": "https://github.com/srfrnk/ng-device-detector",
+  "dependencies": {
+    "re-tree": "^0.0.2"
+  }
+}

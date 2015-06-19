@@ -10,7 +10,7 @@
    *  Extracted from this article --> http://goo.gl/hiq78
    */
   angular
-    .module('gdgappApp.directives')
+    .module('webApp.directives')
     .directive('gdgGridExpander', gridExpander);
   
   gridExpander.$inject = ['$compile'];
@@ -27,7 +27,7 @@
         controller: Controller,
         controllerAs: 'vm',
         link: link,
-        restrict: 'A',
+        restrict: 'EA',
         scope: {
           images: '='
         }
@@ -40,7 +40,7 @@
 
       angular.forEach(scope.vm.images,function(i){
 
-        thumbnailsHtml+= '<li>' +
+        thumbnailsHtml+= '<li class="col s6 m3">' +
             '<a href="" '+
                'data-largesrc="'+i.url+'"' + 
                'data-title="'+i.title+'" ' + 
@@ -52,7 +52,7 @@
 
 
       var gridlHtml =  
-        '<ul id="og-grid" class="og-grid">' + 
+        '<ul id="og-grid" class="og-grid row">' + 
           thumbnailsHtml + 
         '</ul>';
 

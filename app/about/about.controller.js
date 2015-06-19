@@ -3,15 +3,15 @@
   
   angular
     .module('webApp.controllers')
-    .controller('MainController', MainController);
+    .controller('AboutController', Controller);
   
-  //MainController.$inject = [''];
+  //Controller.$inject = ['dependencies'];
   
   /* @ngInject */
-  function MainController() {
+  function Controller() {
     
     var vm = this;
-    vm.title = 'Titulo';
+    vm.title = 'About';
     activate();
     
     ///////FUNCIONES PRIVADAS/////////

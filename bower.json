@@ -16,6 +16,8 @@
   "dependencies": {
     "angular": "~1.4.0",
     "materialize": "~0.96.1",
-    "ui-router": "~0.2.15"
+    "ui-router": "~0.2.15",
+    "modernizr": "~2.8.3",
+    "ng-device-detector": "~1.1.7"
   }
 }

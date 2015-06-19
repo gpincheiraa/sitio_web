@@ -1,0 +1,25 @@
+<div class="row">
+
+  <div ng-class="{'col s3':  vm.isDesktop, 'col s12': !vm.isDesktop}">
+    <!-- Grey navigation panel -->
+    <p>ACÁ IRÁ LA BARRA DE NAVEGACIÓN</p>
+    <p ng-bind="vm.title"></p>
+  </div>
+
+  <div ng-class="{'col s9':  vm.isDesktop, 'col s12': !vm.isDesktop}">
+    <!-- Teal page content  -->
+    <p>ACÁ SERÁ SCROLLING O SERÁ CON UI VIEW</p>
+    
+    <div ng-if="vm.isDesktop">
+      <ui-view></ui-view>
+    </div>
+    
+    <div ng-if="!vm.isDesktop">
+      <div ng-include src="'app/portfolio/portfolio.html'"></div>
+      <div ng-include src="'app/about/about.html'"></div>
+    </div>
+    
+    <!-- <gdg-grid-expander images="vm.images"></gdg-grid-expander> -->
+  </div>
+
+</div>

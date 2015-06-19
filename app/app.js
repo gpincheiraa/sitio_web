@@ -20,6 +20,7 @@ angular
   .module('webApp',[
 
     'ui.router',
+    'ng.deviceDetector',
 
     'webApp.controllers',
     'webApp.services',
@@ -27,7 +28,7 @@ angular
     'webApp.filters'])
 
   .config(['$stateProvider','$urlRouterProvider',config])
-  .run(['$state','$rootScope',run]);
+  .run(['$state','$rootScope','deviceDetector',run]);
   
   /*
    * @description
@@ -38,13 +39,21 @@ angular
   
   function config($stateProvider,$urlRouterProvider){
     
-
     $stateProvider
       .state('app', {
         url: '/',
         controller: 'MainController as vm',
-        templateUrl: 'app/main/partials/main.html'
+        templateUrl: 'app/main/main.html',
       })
+        .state('app.portfolio',{
+          url: 'portfolio',
+          templateUrl: 'app/portfolio/portfolio.html',
+        })
+        .state('app.about',{
+          url: 'about',
+          templateUrl: 'app/about/about.html',
+        })
+
       
       $urlRouterProvider.otherwise('/');
   }
