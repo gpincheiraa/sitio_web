@@ -6,27 +6,32 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" />
-  <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/><link type="text/css" rel="stylesheet" href="css/grid.css"/>
+  <!-- bower:css --> 
+  <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"> 
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/grid.css">
+  <!-- endinject -->
+  
 
 </head>
 <body ng-app="webApp">
   <div class="container" ui-view></div>
-
-  <script src="bower_components/modernizr/modernizr.js"></script>
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
-  <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
-
-  <script src="bower_components/re-tree/re-tree.min.js"></script>
-  <script src="bower_components/ng-device-detector/ng-device-detector.min.js"></script>
-  
+  <!-- bower:js -->  
+  <script src="bower_components/angular/angular.js"></script>  
+  <script src="bower_components/jquery/dist/jquery.js"></script>  
+  <script src="bower_components/ui-router/release/angular-ui-router.js"></script>  
+  <script src="bower_components/re-tree/re-tree.js"></script>  
+  <script src="bower_components/materialize/bin/materialize.js"></script>  
+  <script src="bower_components/ng-device-detector/ng-device-detector.js"></script>  
+  <!-- endinject -->
+  <!-- inject:js -->
   <script src="app/app.js"></script>
-  <script src="app/common/services/anchorSmoothScroll.service.js"></script>
-  
-  <script src="app/main/main.controller.js"></script>
   <script src="app/about/about.controller.js"></script>
+  <script src="app/main/main.controller.js"></script>
   <script src="app/portfolio/portfolio.controller.js"></script>
+  <script src="app/common/services/anchorSmoothScroll.service.js"></script>
   <script src="app/common/directives/grid-expander/grid-expander.js"></script>
+  <!-- endinject -->
 </body>
 </html>
