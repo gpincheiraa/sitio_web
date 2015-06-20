@@ -10,18 +10,19 @@
   <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"> 
   <!-- endinject -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="app/main/main.css">
   <!-- endinject -->
   
 
 </head>
 <body ng-app="webApp">
-  <div class="container" ui-view></div>
+  <div ui-view></div>
   <!-- bower:js -->  
   <script src="bower_components/angular/angular.js"></script>  
   <script src="bower_components/jquery/dist/jquery.js"></script>  
   <script src="bower_components/ui-router/release/angular-ui-router.js"></script>  
   <script src="bower_components/re-tree/re-tree.js"></script>  
+  <script src="bower_components/angular-bindonce/bindonce.js"></script>  
   <script src="bower_components/materialize/bin/materialize.js"></script>  
   <script src="bower_components/ng-device-detector/ng-device-detector.js"></script>  
   <!-- endinject -->
@@ -31,7 +32,6 @@
   <script src="app/main/main.controller.js"></script>
   <script src="app/portfolio/portfolio.controller.js"></script>
   <script src="app/common/services/anchorSmoothScroll.service.js"></script>
-  <script src="app/common/directives/grid-expander/grid-expander.js"></script>
   <!-- endinject -->
 </body>
 </html>

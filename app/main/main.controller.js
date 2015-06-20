@@ -12,9 +12,10 @@
     
     var vm = this;
     
-    vm.isDesktop = deviceDetector.isDesktop();
+    vm.isMobile = deviceDetector.isMobile();
+    vm.isOpenMenu = false;
 
-    if(vm.isDesktop)
+    if(!vm.isMobile)
       $state.go('app.portfolio');
 
   }

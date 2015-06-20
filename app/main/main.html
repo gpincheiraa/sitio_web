@@ -1,25 +1,49 @@
 <div class="row">
-
-  <div ng-class="{'col s3':  vm.isDesktop, 'col s12': !vm.isDesktop}">
-    <!-- Grey navigation panel -->
-    <p>ACÁ IRÁ LA BARRA DE NAVEGACIÓN</p>
-    <p ng-bind="vm.title"></p>
-  </div>
-
-  <div ng-class="{'col s9':  vm.isDesktop, 'col s12': !vm.isDesktop}">
-    <!-- Teal page content  -->
-    <p>ACÁ SERÁ SCROLLING O SERÁ CON UI VIEW</p>
+  
+  <!-- TABLET/DESKTOP NAV --> 
+  <div class="menu"
+       bindonce 
+       bo-class="{'col s3':  !vm.isMobile, 'col s12': vm.isMobile}">
     
-    <div ng-if="vm.isDesktop">
+    <div bindonce bo-if="!vm.isMobile">
+      <ul class="side-nav fixed">
+        <li>Portafolio</li>
+        <li>Somos</li>
+      </ul>
+    </div>
+    
+    <div class="row" bindonce bo-if="vm.isMobile">
+      <div class="col s3 offset-s9">
+        <a class="toggle-button" 
+                ng-class="{'collapsed': vm.isOpenMenu}"
+                ng-click="vm.isOpenMenu = !vm.isOpenMenu">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path class="top-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.0916789,20.818994 53.8166421,0"/>
+              <path class="middle-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0"/>
+              <path class="bottom-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.0916788,42.95698 53.8166422,0"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <div bindonce bo-class="{'col s9':  !vm.isMobile, 'col s12': vm.isMobile}">
+    
+    <!-- TABLET/DESKTOP VIEW -->
+    <div bindonce bo-if="!vm.isMobile">
       <ui-view></ui-view>
     </div>
     
-    <div ng-if="!vm.isDesktop">
+    <!-- MOBILE VIEW -->
+    <div bindonce bo-if="vm.isMobile">
       <div ng-include src="'app/portfolio/portfolio.html'"></div>
       <div ng-include src="'app/about/about.html'"></div>
     </div>
     
-    <!-- <gdg-grid-expander images="vm.images"></gdg-grid-expander> -->
   </div>
 
 </div>

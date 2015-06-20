@@ -21,6 +21,7 @@ angular
 
     'ui.router',
     'ng.deviceDetector',
+    'pasvaz.bindonce',
 
     'webApp.controllers',
     'webApp.services',
