@@ -1,18 +1,18 @@
 <div class="row">
-  
-  <!-- TABLET/DESKTOP NAV --> 
   <div class="menu"
        bindonce 
        bo-class="{'col s3':  !vm.isMobile, 'col s12': vm.isMobile}">
-    
+    <!-- TABLET/DESKTOP NAV --> 
     <div bindonce bo-if="!vm.isMobile">
       <ul class="side-nav fixed">
-        <li>Portafolio</li>
-        <li>Somos</li>
+        <li ng-click="vm.goToState('app.portfolio')">Portafolio</li>
+        <li ng-click="vm.goToState('app.about')">Somos</li>
       </ul>
     </div>
     
+    <!-- MOBILE NAV --> 
     <div class="row" bindonce bo-if="vm.isMobile">
+      <!-- HAMBURGUER BUTTON -->
       <div class="col s3 offset-s9">
         <a class="toggle-button" 
                 ng-class="{'collapsed': vm.isOpenMenu}"
@@ -26,24 +26,21 @@
           </svg>
         </a>
       </div>
+      <!-- MOBILE MENU -->
+ 
     </div>
-
   </div>
   
-
   <div bindonce bo-class="{'col s9 offset-s3 container':  !vm.isMobile, 'col s12': vm.isMobile}">
-    
     <!-- TABLET/DESKTOP VIEW -->
     <div bindonce bo-if="!vm.isMobile">
       <ui-view></ui-view>
-    </div>
-    
+    </div> 
     <!-- MOBILE VIEW -->
     <div bindonce bo-if="vm.isMobile">
       <div ng-include src="'app/portfolio/portfolio.html'"></div>
       <div ng-include src="'app/about/about.html'"></div>
-    </div>
-    
+    </div> 
   </div>
 
-</div>
+</div><!-- row -->

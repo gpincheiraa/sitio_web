@@ -15,8 +15,15 @@
     vm.isMobile = deviceDetector.isMobile();
     vm.isOpenMenu = false;
 
+    vm.goToState = go;
+
     if(!vm.isMobile)
-      $state.go('app.portfolio');
+      go('app.portfolio')
+
+    // Functions of the controller
+    function go(stateName){
+      $state.go(stateName);
+    }
 
   }
 })();
