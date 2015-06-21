@@ -1,3 +1,21 @@
 <div ng-controller="PortfolioController as vm">
   <h1 ng-bind="vm.title"></h1>
+  
+  <div class="controls">
+    <label>Filter:</label>
+    <a class="filter waves-effect waves-light btn" data-filter="all">Todos</a>
+    <a class="filter waves-effect waves-light btn"
+       data-filter=".{{category}}" 
+       ng-repeat="category in vm.categories" 
+       ng-bind="category"></a>
+  </div>
+
+
+    <div class="row" gp-mixitup-container> 
+      <div class="col m3 s12 mix {{job.category}}" ng-repeat="job in vm.jobs track by job.id" gp-mixitup-item>
+        <img bo-src="job.thumbnail">
+      </div> 
+    </div>
+
+
 </div>

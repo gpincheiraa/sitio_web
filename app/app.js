@@ -22,6 +22,7 @@ angular
     'ui.router',
     'ng.deviceDetector',
     'pasvaz.bindonce',
+    // 'iso.directives',
 
     'webApp.controllers',
     'webApp.services',

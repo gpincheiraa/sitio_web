@@ -38,8 +38,16 @@
     </div> 
     <!-- MOBILE VIEW -->
     <div bindonce bo-if="vm.isMobile">
+      <!-- THE SECTIONS -->
       <div ng-include src="'app/portfolio/portfolio.html'"></div>
       <div ng-include src="'app/about/about.html'"></div>
+      <!-- THE FLOATING BUTTON  -->
+      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large light-blue accent-4 waves-effect waves-light">
+          <i class="large mdi-maps-local-post-office"></i>
+        </a>
+      </div>
+
     </div> 
   </div>
 
