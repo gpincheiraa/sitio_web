@@ -22,22 +22,23 @@
     "angular-bindonce": "~0.3.3",
     "mixitup": "~2.1.8",
     "lodash": "~3.9.3",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "angular-materialize": "*"
   },
   "overrides": {
     
     "angular": {
-      "dependencies":{
-        "jquery":  "*"
+      "dependencies": {
+        "jquery": "*"
       }
     },
     "angular-bindonce": {
-      "dependencies":{
+      "dependencies": {
         "angular": "*"
       }
     },
     "re-tree": {
-      "dependencies":{
+      "dependencies": {
         "angular": "*"
       }
     },
@@ -46,7 +47,13 @@
     },
     "modernizr": {
       "main": "modernizr.js"
+    },
+    "angular-materialize": {
+      "dependencies":{
+        "angular": "*",
+        "materialize": "*"
+      }
     }
-  }
 
+  }
 }

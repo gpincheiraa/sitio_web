@@ -5,29 +5,42 @@
     <!-- TABLET/DESKTOP NAV --> 
     <div bindonce bo-if="!vm.isMobile">
       <ul class="side-nav fixed">
-        <li ng-click="vm.goToState('app.portfolio')">Portafolio</li>
-        <li ng-click="vm.goToState('app.about')">Somos</li>
+        <li class="logo">
+          <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+            <object id="front-page-logo" 
+                    type="image/svg+xml" 
+                    data="images/materialize.svg">
+                    Your browser does not support SVG
+            </object>
+          </a>
+        </li>
+        <hr>
+        <li class="bold" ng-click="vm.goToState('app.portfolio')">Portafolio</li>
+        <li class="bold" ng-click="vm.goToState('app.about')">Somos</li>
       </ul>
     </div>
     
     <!-- MOBILE NAV --> 
-    <div class="row" bindonce bo-if="vm.isMobile">
-      <!-- HAMBURGUER BUTTON -->
-      <div class="col s3 offset-s9">
-        <a class="toggle-button" 
-                ng-class="{'collapsed': vm.isOpenMenu}"
-                ng-click="vm.isOpenMenu = !vm.isOpenMenu">
-          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <path class="top-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.0916789,20.818994 53.8166421,0"/>
-              <path class="middle-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.1969746,31.909063 53.8166424,0"/>
-              <path class="bottom-bar icon-bar" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="bevel" d="m 5.0916788,42.95698 53.8166422,0"/>
-            </g>
-          </svg>
-        </a>
-      </div>
-      <!-- MOBILE MENU -->
- 
+    <div bindonce bo-if="vm.isMobile">
+      
+        <nav class="light-blue accent-4">
+          <div class='container'>
+            <div class='nav-wrapper'>
+              <a class='brand-logo' href='#'>Logo</a>
+              <a class='button-collapse right' 
+                 data-activates="nav-mobile" 
+                 data-sidenav="left"
+                 data-closeonclick="true">
+                <i class='mdi-navigation-menu'></i>
+              </a>
+              <ul class='side-nav' id="nav-mobile">
+                <li class="bold" ng-click=""><a>Portafolio</a></li>
+                <li class="bold" ng-click=""><a>Somos</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
     </div>
   </div>
   
