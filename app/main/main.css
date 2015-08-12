@@ -4,11 +4,28 @@
 
 .side-nav li {
   float: none;
-  padding: 0 15px;
+  padding: 10px 20px;
   cursor: pointer;
+  display: flex;
+}
+.side-nav li strong{
+	padding-left: 15px;
 }
 
-#logo-container {
-  height: 57px;
-  margin: 32px;
+#logo-container {    
+	height: auto;
+    margin: 0px auto;
+    line-height: 0;
+    text-align: center;
+}
+
+
+/*Icons Materialize colors*/
+
+.assignment{
+	color:rgb(245,165,77);
+}
+
+.assignment_ind{
+	color:rgb(24,165,77);
 }

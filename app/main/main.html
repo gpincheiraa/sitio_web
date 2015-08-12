@@ -5,18 +5,25 @@
     <!-- TABLET/DESKTOP NAV --> 
     <div bindonce bo-if="!vm.isMobile">
       <ul class="side-nav fixed">
-        <li class="logo">
+        <li class="logo-container">
+          <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+
+          <img class="circle responsive-img"  src="./images/pia.jpg" ></img> 
+          </a>
+          <!-- cambiar pia.jpg a gon.jpg -->
+          <!-- 
           <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
             <object id="front-page-logo" 
                     type="image/svg+xml" 
                     data="images/materialize.svg">
                     Your browser does not support SVG
             </object>
-          </a>
+          </a> -->
         </li>
+
         <hr>
-        <li class="bold" ng-click="vm.goToState('app.portfolio')">Portafolio</li>
-        <li class="bold" ng-click="vm.goToState('app.about')">Somos</li>
+        <li class="bold" ng-click="vm.goToState('app.portfolio')"><i class="Tiny material-icons assignment">assignment</i> <strong>Portafolio</strong></li>
+        <li class="bold" ng-click="vm.goToState('app.about')"><i class="Tiny material-icons assignment_ind">assignment_ind</i> <strong>Somos</strong></li>
       </ul>
     </div>
     
@@ -34,8 +41,8 @@
                 <i class='mdi-navigation-menu'></i>
               </a>
               <ul class='side-nav' id="nav-mobile">
-                <li class="bold" ng-click=""><a>Portafolio</a></li>
-                <li class="bold" ng-click=""><a>Somos</a></li>
+                <li class="bold" ng-click=""><a><i class="Tiny material-icons assignment">assignment</i> <strong>Portafolio</strong></a></li>
+                <li class="bold" ng-click=""><a><i class="Tiny material-icons assignment_ind">assignment_ind</i> <strong>Somos</strong></a></li>
               </ul>
             </div>
           </div>
